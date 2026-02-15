@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  min-height: 90vh;
+  min-height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
     url('/img/slider/dtla-blue.jpg') center / cover no-repeat;
   color: #fff;
@@ -43,5 +43,49 @@
   .hero {
     min-height: 70vh;
     padding: 2rem 1rem;
+  }
+}
+
+/* ===== */
+
+.about {
+  padding: 80px 0;
+}
+
+.imageCol {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.profileImage {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.textCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .about {
+    padding: 60px 0;
+  }
+
+  .profileImage {
+    width: 200px;
+    height: 200px;
   }
 }
