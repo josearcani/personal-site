@@ -20,10 +20,9 @@ const sidebars = {
     'notes',
     {
       type: 'category',
-      label: 'Tutorialsasdfa',
+      label: 'Dotnet',
       items: [
-        'tutorial-basics/congratulations',
-        'tutorial-basics/create-a-page',
+        'dotnet/dotnet-commands',
       ],
     },
   ], 
