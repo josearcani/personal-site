@@ -1,12 +1,12 @@
-yangshun:
-  name: Yangshun Tay
-  title: Front End Engineer @ Facebook
-  url: https://github.com/yangshun
-  image_url: https://github.com/yangshun.png
+josearcani:
+  name: Jose Arcani
+  title: Owner of this site
+  url: https://github.com/josearcani
+  image_url: https://github.com/josearcani.png
   page: true
   socials:
-    x: yangshunz
-    github: yangshun
+    x: jose_arcani
+    github: josearcani
 
 slorber:
   name: Sébastien Lorber
