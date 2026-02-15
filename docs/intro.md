@@ -4,4 +4,10 @@ sidebar_position: 1
 
 # Notes
 
-Here is where I put quick tutorials to setup envs, interesting findings, subjects related to my work and tech interest
+A collection of practical notes and references built from real-world experience:
+
+- Step-by-step environment setup guides
+- Tutorials and how-to walkthroughs
+- Book and course summaries
+- Workflows and tips gained through experience
+- Troubleshooting guides and common fixes

@@ -68,6 +68,7 @@ const config = {
           //   position: 'left',
           //   label: 'Docs',
           // },
+          { to: 'projects', label: 'Projects', position: 'left' },
           {
             type: 'doc',
             position: 'left',
@@ -80,11 +81,15 @@ const config = {
             sidebarId: 'gists',
             label: 'Gists',
           },
-          { to: 'projects', label: 'Projects', position: 'left' },
-          { to: '/blog', label: 'Blog', position: 'left' },
+          { to: '/blog', label: 'Blog', position: 'right' },
           {
             href: 'https://github.com/josearcani',
             label: 'GitHub',
+            position: 'right',
+          },
+          {
+            href: 'https://gitlab.com/josearcani',
+            label: 'Gitlab',
             position: 'right',
           },
         ],
