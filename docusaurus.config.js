@@ -52,9 +52,9 @@ const config = {
     ({
       image: 'img/jose.jpg',
       navbar: {
-        title: 'Jose Arcani',
+        title: '',
         logo: {
-          alt: 'Jose Arcani Logosss',
+          alt: 'Jose Arcani Logo',
           src: 'img/devicon/logo.svg',
         },
         items: [
