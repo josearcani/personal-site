@@ -52,10 +52,10 @@ const config = {
     ({
       image: 'img/jose.jpg',
       navbar: {
-        title: '',
+        title: 'Jose Arcani',
         logo: {
           alt: 'Jose Arcani Logo',
-          src: 'img/devicon/logo.svg',
+          src: 'img/devicon/terminal.svg',
         },
         items: [
           {to: '/#projects', label: 'Projects', position: 'left'},
