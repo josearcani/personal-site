@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="atom.xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://josearcani.com/blog</id>
+    <title>Jose Arcani Blog</title>
+    <updated>2025-03-05T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://josearcani.com/blog"/>
+    <subtitle>Jose Arcani Blog</subtitle>
+    <icon>https://josearcani.com/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[3 Things I Wish I Knew When I Started Learning to Code]]></title>
+        <id>https://josearcani.com/blog/self-taught-lessons</id>
+        <link href="https://josearcani.com/blog/self-taught-lessons"/>
+        <updated>2025-03-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[I came from an electronics engineering background and taught myself web]]></summary>
+        <content type="html"><![CDATA[<p>I came from an electronics engineering background and taught myself web
+development through books, FreeCodeCamp, and Udemy. Here are three things that
+would have saved me time.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="1-build-things-before-you-feel-ready">1. Build things before you feel ready<a href="https://josearcani.com/blog/self-taught-lessons#1-build-things-before-you-feel-ready" class="hash-link" aria-label="Direct link to 1. Build things before you feel ready" title="Direct link to 1. Build things before you feel ready">​</a></h2>
+<p>Tutorials feel productive, but you only really learn when you get stuck on
+your own project. My first MERN app was messy — and that's exactly why it
+taught me more than any course.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2-learn-debugging-not-just-coding">2. Learn debugging, not just coding<a href="https://josearcani.com/blog/self-taught-lessons#2-learn-debugging-not-just-coding" class="hash-link" aria-label="Direct link to 2. Learn debugging, not just coding" title="Direct link to 2. Learn debugging, not just coding">​</a></h2>
+<p>Knowing how to read stack traces, use breakpoints, and isolate problems is
+more valuable than memorizing syntax. This skill compounds over time.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3-pick-a-stack-and-go-deep">3. Pick a stack and go deep<a href="https://josearcani.com/blog/self-taught-lessons#3-pick-a-stack-and-go-deep" class="hash-link" aria-label="Direct link to 3. Pick a stack and go deep" title="Direct link to 3. Pick a stack and go deep">​</a></h2>
+<p>I spent months jumping between frameworks. Progress came when I committed to
+the MERN/PERN stacks and built real projects with them. Breadth comes later.</p>]]></content>
+        <author>
+            <name>Jose Arcani</name>
+            <uri>https://github.com/josearcani</uri>
+        </author>
+        <category label="Career" term="Career"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Dockerizing a .NET API for Local Development]]></title>
+        <id>https://josearcani.com/blog/dockerizing-dotnet-api</id>
+        <link href="https://josearcani.com/blog/dockerizing-dotnet-api"/>
+        <updated>2025-02-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Setting up a consistent dev environment across machines can be frustrating.]]></summary>
+        <content type="html"><![CDATA[<p>Setting up a consistent dev environment across machines can be frustrating.
+Here's how I containerize my .NET APIs so the setup is just
+<code>docker compose up</code>.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-problem">The Problem<a href="https://josearcani.com/blog/dockerizing-dotnet-api#the-problem" class="hash-link" aria-label="Direct link to The Problem" title="Direct link to The Problem">​</a></h2>
+<p>Every time I set up a project on a new machine — or onboard someone — there's
+a checklist: install the right SDK version, configure connection strings, seed
+the database. Docker removes most of that friction.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-dockerfile">The Dockerfile<a href="https://josearcani.com/blog/dockerizing-dotnet-api#the-dockerfile" class="hash-link" aria-label="Direct link to The Dockerfile" title="Direct link to The Dockerfile">​</a></h2>
+<div class="language-dockerfile codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-dockerfile codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">WORKDIR /src</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">COPY *.csproj ./</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">RUN dotnet restore</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">COPY . ./</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">RUN dotnet publish -c Release -o /app</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">FROM mcr.microsoft.com/dotnet/aspnet:8.0</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">WORKDIR /app</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">COPY --from=build /app .</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">ENTRYPOINT ["dotnet", "MyApi.dll"]</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="docker-compose">Docker Compose<a href="https://josearcani.com/blog/dockerizing-dotnet-api#docker-compose" class="hash-link" aria-label="Direct link to Docker Compose" title="Direct link to Docker Compose">​</a></h2>
+<div class="language-yaml codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-yaml codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token key atrule" style="color:#00a4db">services</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">api</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">build</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> .</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">ports</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"5000:8080"</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">depends_on</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> db</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">db</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">image</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> mcr.microsoft.com/mssql/server</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain">2022</span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain">latest</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">environment</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token key atrule" style="color:#00a4db">SA_PASSWORD</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"YourStrong!Password"</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token key atrule" style="color:#00a4db">ACCEPT_EULA</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"Y"</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">ports</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"1433:1433"</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="takeaway">Takeaway<a href="https://josearcani.com/blog/dockerizing-dotnet-api#takeaway" class="hash-link" aria-label="Direct link to Takeaway" title="Direct link to Takeaway">​</a></h2>
+<p>This is a starting point — for production you'd want health checks, volume
+mounts for data persistence, and proper secret management. But for local dev,
+this gets you running in seconds.</p>]]></content>
+        <author>
+            <name>Jose Arcani</name>
+            <uri>https://github.com/josearcani</uri>
+        </author>
+        <category label="Backend" term="Backend"/>
+        <category label="Dotnet" term="Dotnet"/>
+        <category label="Devops" term="Devops"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Why I Built This Site]]></title>
+        <id>https://josearcani.com/blog/welcome</id>
+        <link href="https://josearcani.com/blog/welcome"/>
+        <updated>2025-01-15T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[I've been meaning to build a personal site for a while. A place to share what]]></summary>
+        <content type="html"><![CDATA[<p>I've been meaning to build a personal site for a while. A place to share what
+I learn, document solutions I keep coming back to, and keep track of projects
+I'm working on.</p>
+<p>As a backend developer, most of my work lives in terminals, APIs, and databases
+— not exactly the most visual stuff. But writing about it forces me to
+understand things better, and if someone else finds it useful, even better.</p>
+<p>This site is built with Docusaurus and hosted on GitHub Pages. I plan to use
+the blog for longer posts and reflections, the Notes section for quick
+references, and Gists for reusable code snippets.</p>
+<p>If you want to connect, find me on
+<a href="https://github.com/josearcani" target="_blank" rel="noopener noreferrer">GitHub</a> or
+<a href="https://www.linkedin.com/in/josearcani/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</p>]]></content>
+        <author>
+            <name>Jose Arcani</name>
+            <uri>https://github.com/josearcani</uri>
+        </author>
+        <category label="Career" term="Career"/>
+    </entry>
+</feed>
