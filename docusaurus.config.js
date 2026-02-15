@@ -1,5 +1,5 @@
 // @ts-check
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -58,16 +58,29 @@ const config = {
           src: 'img/devicon/terminal.svg',
         },
         items: [
-          {to: '/#projects', label: 'Projects', position: 'left'},
-          {to: '/#skills', label: 'Skills', position: 'left'},
-          {to: '/#tools', label: 'Tools', position: 'left'},
+          // {to: '/#projects', label: 'Projects', position: 'left'},
+          // {to: '/#skills', label: 'Skills', position: 'left'},
+          // {to: '/#tools', label: 'Tools', position: 'left'},
+          // {
+          //   type: 'docSidebar',
+          //   sidebarId: 'tutorialSidebar',
+          //   position: 'left',
+          //   label: 'Docs',
+          // },
+          {
+            type: 'doc',
+            position: 'left',
+            docId: 'intro',
+            label: 'Notes',
+          },
           {
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Docs',
+            sidebarId: 'gists',
+            label: 'Gists',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          { to: 'projects', label: 'Projects', position: 'left' },
+          { to: '/blog', label: 'Blog', position: 'left' },
           {
             href: 'https://github.com/josearcani',
             label: 'GitHub',
@@ -81,17 +94,17 @@ const config = {
           {
             title: 'Content',
             items: [
-              {label: 'Docs', to: '/docs/intro'},
-              {label: 'Blog', to: '/blog'},
+              { label: 'Docs', to: '/docs/intro' },
+              { label: 'Blog', to: '/blog' },
             ],
           },
           {
             title: 'Social',
             items: [
-              {label: 'GitHub', href: 'https://github.com/josearcani'},
-              {label: 'LinkedIn', href: 'https://www.linkedin.com/in/josearcani'},
-              {label: 'Twitter', href: 'https://twitter.com/jose_arcani'},
-              {label: 'Stack Overflow', href: 'https://stackoverflow.com/users/17825417/jose-arcani'},
+              { label: 'GitHub', href: 'https://github.com/josearcani' },
+              { label: 'LinkedIn', href: 'https://www.linkedin.com/in/josearcani' },
+              { label: 'Twitter', href: 'https://twitter.com/jose_arcani' },
+              { label: 'Stack Overflow', href: 'https://stackoverflow.com/users/17825417/jose-arcani' },
             ],
           },
         ],
