@@ -56,6 +56,7 @@ const config = {
         logo: {
           alt: 'Jose Arcani Logo',
           src: 'img/devicon/terminal.svg',
+          srcDark: 'img/devicon/terminal-white.svg',
         },
         items: [
           // {to: '/#projects', label: 'Projects', position: 'left'},

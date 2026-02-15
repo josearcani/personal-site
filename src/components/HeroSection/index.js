@@ -5,9 +5,9 @@ import clsx from 'clsx';
 const socialLinks = [
   { label: 'GitHub', url: 'https://github.com/josearcani' },
   { label: 'LinkedIn', url: 'https://www.linkedin.com/in/josearcani/' },
-  { label: 'X', url: 'https://twitter.com/jose_arcani' },
-  { label: 'Medium', url: 'https://medium.com/@josearcani' },
-  { label: 'Dev.to', url: 'https://dev.to/josearcani' },
+  // { label: 'X', url: 'https://twitter.com/jose_arcani' },
+  // { label: 'Medium', url: 'https://medium.com/@josearcani' },
+  // { label: 'Dev.to', url: 'https://dev.to/josearcani' },
 ];
 
 export default function HeroSection() {
