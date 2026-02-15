@@ -1,0 +1,29 @@
+facebook:
+    label: Facebook
+    permalink: /facebook
+    description: Facebook tag description
+
+docusaurus:
+    label: Docusaurus
+    permalink: /docusaurus
+    description: Docusaurus tag description
+
+career:
+    label: Career
+    permalink: /career
+    description: Career tag description
+
+backend:
+    label: Backend
+    permalink: /backend
+    description: Backend tag description
+
+dotnet:
+    label: Dotnet
+    permalink: /dotnet
+    description: FaceDotnetbook tag description
+
+devops:
+    label: Devops
+    permalink: /devops
+    description: Devops tag description

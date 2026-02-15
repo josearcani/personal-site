@@ -1,0 +1,23 @@
+josearcani:
+  name: Jose Arcani
+  title: Owner of this site
+  url: https://github.com/josearcani
+  image_url: https://github.com/josearcani.png
+  page: true
+  socials:
+    x: jose_arcani
+    github: josearcani
+
+slorber:
+  name: Sébastien Lorber
+  title: Docusaurus maintainer
+  url: https://sebastienlorber.com
+  image_url: https://github.com/slorber.png
+  page:
+    # customize the url of the author page at /blog/authors/<permalink>
+    permalink: '/all-sebastien-lorber-articles'
+  socials:
+    x: sebastienlorber
+    linkedin: sebastienlorber
+    github: slorber
+    newsletter: https://thisweekinreact.com
