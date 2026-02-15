@@ -118,10 +118,6 @@ export default function ProjectsSection() {
       <div className="container">
         <div className="text--center margin-bottom--lg">
           <Heading as="h2">Projects</Heading>
-          <p>
-            As practice makes perfect, here is a list of some of my personal
-            projects.
-          </p>
         </div>
 
         <div className={styles.filters}>

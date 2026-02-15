@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <Layout
       title="Home"
-      description="Jose Arcani - Backend Developer Portfolio">
+      description="Backend dev">
       <HeroSection />
       <main>
         <SkillsSection />

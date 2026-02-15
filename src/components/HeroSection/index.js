@@ -35,7 +35,7 @@ export default function HeroSection() {
 
       <section id="about" className={styles.about}>
         <div className="container">
-          <div className="row">
+          <div className="row" style={{justifyContent: 'center'}}>
             <div className={clsx('col col--8', styles.textCol)}>
               <Heading as="h2">About Me</Heading>
               <p>

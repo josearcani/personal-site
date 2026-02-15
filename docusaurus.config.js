@@ -59,20 +59,10 @@ const config = {
           srcDark: 'img/devicon/terminal-white.svg',
         },
         items: [
-          // {to: '/#projects', label: 'Projects', position: 'left'},
-          // {to: '/#skills', label: 'Skills', position: 'left'},
-          // {to: '/#tools', label: 'Tools', position: 'left'},
-          // {
-          //   type: 'docSidebar',
-          //   sidebarId: 'tutorialSidebar',
-          //   position: 'left',
-          //   label: 'Docs',
-          // },
-          { to: 'projects', label: 'Projects', position: 'left' },
           {
             type: 'doc',
             position: 'left',
-            docId: 'intro',
+            docId: 'notes',
             label: 'Notes',
           },
           {
@@ -81,6 +71,7 @@ const config = {
             sidebarId: 'gists',
             label: 'Gists',
           },
+          { to: 'projects', label: 'Projects', position: 'left' },
           { to: '/blog', label: 'Blog', position: 'right' },
           {
             href: 'https://github.com/josearcani',
@@ -100,7 +91,9 @@ const config = {
           {
             title: 'Content',
             items: [
-              { label: 'Docs', to: '/docs/intro' },
+              { label: 'Notes', to: '/docs/notes' },
+              { label: 'Gists', to: '/docs/gists' },
+              { label: 'Projects', to: '/projects' },
               { label: 'Blog', to: '/blog' },
             ],
           },
@@ -114,7 +107,7 @@ const config = {
             ],
           },
         ],
-        copyright: 'All rights reserved. Made with ♥ in Latam. Built with Docusaurus.',
+        copyright: 'Built with Docusaurus.',
       },
       prism: {
         theme: prismThemes.github,

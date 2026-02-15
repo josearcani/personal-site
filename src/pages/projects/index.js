@@ -4,8 +4,8 @@ import ProjectsSection from '@site/src/components/ProjectsSection';
 export default function Projects() {
     return (
         <Layout
-            title="Jose Arcani"
-            description="Projects">
+            title="Projects"
+            description="Projects section">
             <main>
                 <ProjectsSection />
             </main>
