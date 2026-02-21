@@ -25,7 +25,14 @@ const sidebars = {
         'dotnet/dotnet-commands',
       ],
     },
-  ], 
+    {
+      type: 'category',
+      label: 'Git',
+      items: [
+        'git/setup-git-accounts-with-ssh',
+      ],
+    },
+  ],
   gists: [
     'gists',
     {
