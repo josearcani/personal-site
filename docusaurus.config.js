@@ -72,7 +72,7 @@ const config = {
             label: 'Gists',
           },
           { to: 'projects', label: 'Projects', position: 'left' },
-          { to: '/blog', label: 'Blog', position: 'right' },
+          // { to: '/blog', label: 'Blog', position: 'right' },
           {
             href: 'https://github.com/josearcani',
             label: 'GitHub',
