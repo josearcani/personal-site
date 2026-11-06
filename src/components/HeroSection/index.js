@@ -1,13 +1,11 @@
 import Heading from '@theme/Heading';
+import Translate, {translate} from '@docusaurus/Translate';
 import styles from './styles.module.css';
 import clsx from 'clsx';
 
 const socialLinks = [
-  { label: 'GitHub', url: 'https://github.com/josearcani' },
-  { label: 'LinkedIn', url: 'https://www.linkedin.com/in/josearcani/' },
-  // { label: 'X', url: 'https://twitter.com/jose_arcani' },
-  // { label: 'Medium', url: 'https://medium.com/@josearcani' },
-  // { label: 'Dev.to', url: 'https://dev.to/josearcani' },
+  {label: 'GitHub', url: 'https://github.com/josearcani'},
+  {label: 'LinkedIn', url: 'https://www.linkedin.com/in/josearcani/'},
 ];
 
 export default function HeroSection() {
@@ -17,14 +15,40 @@ export default function HeroSection() {
         <div className="container">
           <div className={clsx('row', styles.heroRow)}>
             <div className={clsx('col col--6', styles.heroTextCol)}>
-              <p className={styles.subtitle}>Hi. I am</p>
+              <p className={styles.subtitle}>
+                <Translate id="home.hero.greeting">Hi. I am</Translate>
+              </p>
               <Heading as="h1">Jose Arcani</Heading>
-              <p className={styles.role}>Backend Developer</p>
+              <p className={styles.role}>
+                <Translate id="home.hero.role">Software Engineer</Translate>
+              </p>
+              <p className={styles.tagline}>
+                <Translate id="home.hero.tagline">
+                  I build .NET backends and React interfaces, and integrate AI
+                  into real systems.
+                </Translate>
+              </p>
+              <div className={styles.heroActions}>
+                <a
+                  href="/cv/Jose_Arcani_CV_EN.pdf"
+                  className="button button--secondary button--lg"
+                  download>
+                  <Translate id="home.hero.cv">Download CV</Translate>
+                </a>
+                <a
+                  href="#contact"
+                  className="button button--outline button--secondary button--lg">
+                  <Translate id="home.hero.contact">Contact</Translate>
+                </a>
+              </div>
             </div>
             <div className={clsx('col col--6', styles.imageCol)}>
               <img
                 src="/img/jose.jpg"
-                alt="Jose Arcani"
+                alt={translate({
+                  id: 'home.hero.photoAlt',
+                  message: 'Jose Arcani',
+                })}
                 className={styles.profileImage}
               />
             </div>
@@ -37,29 +61,42 @@ export default function HeroSection() {
         <div className="container">
           <div className="row" style={{justifyContent: 'center'}}>
             <div className={clsx('col col--8', styles.textCol)}>
-              <Heading as="h2">About Me</Heading>
+              <Heading as="h2">
+                <Translate id="home.about.title">About Me</Translate>
+              </Heading>
               <p>
-                During my years in University, my first serious approach to
-                programming was dealing with microcontrollers. Besides, I also
-                learned about hardware design and building prototypes. Although it
-                was more focused on the technical part, I was delighted by
-                programming and software.
+                <Translate id="home.about.p1">
+                  I'm a software engineer with 3+ years of experience in
+                  .NET/C# and SQL Server, working across ERP, banking and
+                  real-time communication platforms. I specialize in
+                  refactoring production systems and building integration
+                  tests that keep them stable.
+                </Translate>
               </p>
               <p>
-                Before graduation, I started to look up programming and learned
-                more by myself. Much of the knowledge I have acquired is from
-                books and platforms like FreeCodeCamp, Platzi, and Udemy to focus
-                on the MERN and PERN stacks.
+                <Translate id="home.about.p2">
+                  I use Claude Code and Cursor daily, have built custom agents
+                  and skills for recurring team tasks, and tune context and
+                  token usage for cost. I'm focused on AI-powered backends,
+                  with React and TypeScript on the front.
+                </Translate>
+              </p>
+              <p>
+                <Translate id="home.about.p3">
+                  I enjoy mentoring: I've onboarded new developers and run
+                  technical interviews. My background is in electronics
+                  engineering, which is where my interest in programming
+                  started.
+                </Translate>
               </p>
               <div className={styles.links}>
-                {socialLinks.map(({ label, url }) => (
+                {socialLinks.map(({label, url}) => (
                   <a
                     key={label}
                     href={url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="button button--outline button--primary"
-                  >
+                    className="button button--outline button--primary">
                     {label}
                   </a>
                 ))}
