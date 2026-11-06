@@ -1,0 +1,38 @@
+{
+  "link.title.Content": {
+    "message": "Contenido",
+    "description": "The title of the footer links column with title=Content in the footer"
+  },
+  "link.title.Social": {
+    "message": "Redes",
+    "description": "The title of the footer links column with title=Social in the footer"
+  },
+  "link.item.label.Notes": {
+    "message": "Notas",
+    "description": "The label of footer link with label=Notes linking to /docs/notes"
+  },
+  "link.item.label.Gists": {
+    "message": "Gists",
+    "description": "The label of footer link with label=Gists linking to /docs/gists"
+  },
+  "link.item.label.Projects": {
+    "message": "Proyectos",
+    "description": "The label of footer link with label=Projects linking to /projects"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "The label of footer link with label=GitHub linking to https://github.com/josearcani"
+  },
+  "link.item.label.GitLab": {
+    "message": "GitLab",
+    "description": "The label of footer link with label=GitLab linking to https://gitlab.com/josearcani"
+  },
+  "link.item.label.LinkedIn": {
+    "message": "LinkedIn",
+    "description": "The label of footer link with label=LinkedIn linking to https://www.linkedin.com/in/josearcani/"
+  },
+  "copyright": {
+    "message": "Hecho con Docusaurus.",
+    "description": "The footer copyright"
+  }
+}

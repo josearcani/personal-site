@@ -4,7 +4,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Jose Arcani',
-  tagline: 'Backend Developer',
+  tagline: 'Software Engineer · .NET, React & AI-powered systems',
   favicon: 'img/favicon.ico',
 
   url: 'https://josearcani.com',
@@ -19,7 +19,11 @@ const config = {
 
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'es'],
+    localeConfigs: {
+      en: {label: 'English', htmlLang: 'en'},
+      es: {label: 'Español', htmlLang: 'es'},
+    },
   },
 
   presets: [
@@ -30,16 +34,8 @@ const config = {
         docs: {
           sidebarPath: './sidebars.js',
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        // Blog is disabled for now; posts are kept in /blog for later.
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -72,7 +68,6 @@ const config = {
             label: 'Gists',
           },
           { to: 'projects', label: 'Projects', position: 'left' },
-          // { to: '/blog', label: 'Blog', position: 'right' },
           {
             href: 'https://github.com/josearcani',
             label: 'GitHub',
@@ -83,6 +78,7 @@ const config = {
             label: 'Gitlab',
             position: 'right',
           },
+          { type: 'localeDropdown', position: 'right' },
         ],
       },
       footer: {
@@ -94,16 +90,14 @@ const config = {
               { label: 'Notes', to: '/docs/notes' },
               { label: 'Gists', to: '/docs/gists' },
               { label: 'Projects', to: '/projects' },
-              { label: 'Blog', to: '/blog' },
             ],
           },
           {
             title: 'Social',
             items: [
               { label: 'GitHub', href: 'https://github.com/josearcani' },
-              { label: 'LinkedIn', href: 'https://www.linkedin.com/in/josearcani' },
-              { label: 'Twitter', href: 'https://twitter.com/jose_arcani' },
-              { label: 'Stack Overflow', href: 'https://stackoverflow.com/users/17825417/jose-arcani' },
+              { label: 'GitLab', href: 'https://gitlab.com/josearcani' },
+              { label: 'LinkedIn', href: 'https://www.linkedin.com/in/josearcani/' },
             ],
           },
         ],
