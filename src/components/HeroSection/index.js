@@ -1,5 +1,6 @@
 import Heading from '@theme/Heading';
 import Translate, {translate} from '@docusaurus/Translate';
+import useCvUrl from '@site/src/hooks/useCvUrl';
 import styles from './styles.module.css';
 import clsx from 'clsx';
 
@@ -9,6 +10,7 @@ const socialLinks = [
 ];
 
 export default function HeroSection() {
+  const cvUrl = useCvUrl();
   return (
     <>
       <header id="home" className={styles.hero}>
@@ -30,7 +32,7 @@ export default function HeroSection() {
               </p>
               <div className={styles.heroActions}>
                 <a
-                  href="/cv/Jose_Arcani_CV_EN.pdf"
+                  href={cvUrl}
                   className="button button--secondary button--lg"
                   download>
                   <Translate id="home.hero.cv">Download CV</Translate>
