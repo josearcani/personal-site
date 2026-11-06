@@ -1,0 +1,30 @@
+{
+  "title": {
+    "message": "Jose Arcani",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "Logo de Jose Arcani",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Notes": {
+    "message": "Notas",
+    "description": "Navbar item with label Notes"
+  },
+  "item.label.Gists": {
+    "message": "Gists",
+    "description": "Navbar item with label Gists"
+  },
+  "item.label.Projects": {
+    "message": "Proyectos",
+    "description": "Navbar item with label Projects"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  },
+  "item.label.Gitlab": {
+    "message": "Gitlab",
+    "description": "Navbar item with label Gitlab"
+  }
+}

@@ -1,0 +1,43 @@
+.experience {
+  padding: 60px 0;
+  background: var(--ifm-background-surface-color);
+}
+
+.job {
+  border-left: 3px solid var(--ifm-color-primary);
+  padding-left: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.jobHeader {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.25rem 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.company {
+  margin: 0;
+}
+
+.period,
+.rolePeriod {
+  color: var(--ifm-color-emphasis-600);
+  font-size: 0.9rem;
+}
+
+.role {
+  margin-bottom: 1rem;
+}
+
+.roleTitle {
+  margin-bottom: 0.25rem;
+}
+
+@media screen and (min-width: 768px) {
+  .experience {
+    padding: 80px 0;
+  }
+}

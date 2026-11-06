@@ -1,0 +1,14 @@
+{
+  "version.label": {
+    "message": "Siguiente",
+    "description": "The label for version current"
+  },
+  "sidebar.docs.category.Dotnet": {
+    "message": ".NET",
+    "description": "The label for category Dotnet in sidebar docs"
+  },
+  "sidebar.docs.category.Git": {
+    "message": "Git",
+    "description": "The label for category Git in sidebar docs"
+  }
+}
