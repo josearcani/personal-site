@@ -1,8 +1,10 @@
 import Heading from '@theme/Heading';
 import Translate from '@docusaurus/Translate';
+import useCvUrl from '@site/src/hooks/useCvUrl';
 import styles from './styles.module.css';
 
 export default function ContactSection() {
+  const cvUrl = useCvUrl();
   return (
     <section id="contact" className={styles.contact}>
       <div className="container text--center">
@@ -35,7 +37,7 @@ export default function ContactSection() {
             GitHub
           </a>
           <a
-            href="/cv/Jose_Arcani_CV_EN.pdf"
+            href={cvUrl}
             download
             className="button button--outline button--primary button--lg">
             <Translate id="home.contact.cv">Download CV</Translate>
